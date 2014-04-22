@@ -1,10 +1,7 @@
 var https = require('https');
 var querystring = require('querystring');
 
-// querystring.stringify appears to remove the ""'s from the data which 
-// results in that not getting mapped.
-// querystring.stringify({"Field1":"23.6"});
-var post_data = '{"Field1":"230.6"}'; 
+var post_data =  JSON.stringify({Field1:236});
 
 // Setup the HTTP POST options.
 var options = {
